@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+**/google-services.json
+**GoogleService.info.plist
+.env
+server/serviceAccount.json
+node_modules/
+dist/
+dist-ssr/
