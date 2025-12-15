@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/the_church_bg"
+            android:gravity="fill" />   <!-- fill instead of center -->
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/new_logo"
+            android:gravity="center" />
+    </item>
+</layer-list>

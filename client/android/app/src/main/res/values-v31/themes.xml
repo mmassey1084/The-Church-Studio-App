@@ -1,0 +1,9 @@
+
+<resources>
+    <style name="Theme.TheChurchStudio.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo_inset</item>
+        <item name="windowSplashScreenAnimationDuration">700</item>
+        <item name="postSplashScreenTheme">@style/Theme.TheChurchStudio</item> <!-- see #2 -->
+    </style>
+</resources>

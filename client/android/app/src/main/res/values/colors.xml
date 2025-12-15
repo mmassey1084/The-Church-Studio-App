@@ -1,0 +1,7 @@
+<resources>
+    <!-- add or adjust -->
+    <color name="nav_bar">#111111</color>       <!-- your desired background -->
+    <color name="status_bar">#111111</color>
+    <color name="green">#658D1B</color>
+    <!-- optional: keep status bar consistent -->
+</resources>

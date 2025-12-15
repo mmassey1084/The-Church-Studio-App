@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      styles.xml is now reserved for non-theme styles.
+      All main app themes (Theme.TheChurchStudio, Theme.TheChurchStudio.Splash, etc.)
+      live in themes.xml to avoid duplicate resource conflicts.
+    -->
+
+    <!-- Example: reusable button or text styles can go here later -->
+    <!--
+    <style name="RoundedButton">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">12dp</item>
+    </style>
+    -->
+
+</resources>

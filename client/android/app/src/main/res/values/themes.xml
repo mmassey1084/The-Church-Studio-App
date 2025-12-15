@@ -1,0 +1,39 @@
+<!-- android/app/src/main/res/values/themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main app theme -->
+    <style name="Theme.TheChurchStudio" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Your palette (optional) -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Draw actual bar backgrounds (not transparent) -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Pick a nav bar color (LIGHT GRAY like Facebook) -->
+        <item name="android:navigationBarColor" tools:targetApi="1">@color/green</item>
+        <item name="android:statusBarColor">#111111</item>
+
+        <!-- Stop Android from auto-contrasting/overriding your color -->
+        <!-- RIGHT -->
+
+
+        <!-- (Optional) divider line on 3-button nav -->
+        <!-- <item name="android:navigationBarDividerColor">#C8C8C8</item> -->
+    </style>
+
+    <!-- Splash theme (unchanged) -->
+    <style name="Theme.TheChurchStudio.Splash" parent="Theme.SplashScreen">
+        <item name="android:background">@drawable/splash_background</item>
+        <!-- If you’d rather let the system switch theme after splash:
+        <item name="postSplashScreenTheme">@style/Theme.TheChurchStudio</item>
+        -->
+    </style>
+
+    <!-- Startup (if you use it) -->
+    <style name="Theme.TheChurchStudio.Startup" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>
+

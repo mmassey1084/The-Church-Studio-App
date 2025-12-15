@@ -1,0 +1,11 @@
+import type { FromSchema } from 'json-schema-to-ts';
+import * as schemas from './schemas';
+export type Testinput1MetadataParam = FromSchema<typeof schemas.Testinput1.metadata>;
+export type Testinput1Response200 = FromSchema<typeof schemas.Testinput1.response['200']>;
+export type Testinput1Response400 = FromSchema<typeof schemas.Testinput1.response['400']>;
+export type TokenFormDataParam = FromSchema<typeof schemas.Token.formData>;
+export type TokenInfoMetadataParam = FromSchema<typeof schemas.TokenInfo.metadata>;
+export type TokenInfoResponse200 = FromSchema<typeof schemas.TokenInfo.response['200']>;
+export type TokenInfoResponse401 = FromSchema<typeof schemas.TokenInfo.response['401']>;
+export type TokenResponse200 = FromSchema<typeof schemas.Token.response['200']>;
+export type TokenResponse401 = FromSchema<typeof schemas.Token.response['401']>;

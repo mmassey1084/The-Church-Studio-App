@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "universe",
+      "source": "@universe/v3#1mld74kq6vj9hd",
+      "integrity": "sha512-KvN/3Q/nDHCMTCN7tYn+5QY260KW2uhC0bRDSHZuBRx6WnOtrZXU7/O3eMeFfdrhBbLeso4Y3EBxCt66bFs7Og==",
+      "installerVersion": "6.1.3"
+    }
+  ]
+}

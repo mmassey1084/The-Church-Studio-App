@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">The Church Studio</string>
+    <string name="title_activity_main">The Church Studio</string>
+    <string name="package_name">com.churchstudio.app</string>
+    <string name="custom_url_scheme">com.churchstudio.app</string>
+</resources>

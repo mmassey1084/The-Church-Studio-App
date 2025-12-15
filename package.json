@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n \"client,server\" -c \"auto\" \"npm run dev --prefix client\" \"npm run dev --prefix server\""
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.3",
+    "concurrently": "^8.2.0",
+    "graphql-tag": "^2.12.6",
+    "vite-plugin-pwa": "^1.0.3"
+  },
+  "dependencies": {
+    "@api/universe": "file:.api/apis/universe",
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/browser": "^7.0.2",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/local-notifications": "^7.0.3",
+    "@capgo/capacitor-navigation-bar": "^7.2.3",
+    "@ionic-native/ibeacon": "^5.36.0",
+    "cordova-plugin-device": "^3.0.0",
+    "cordova-plugin-ibeacon": "^3.8.1",
+    "cordova.plugins.diagnostic": "^7.2.5",
+    "csv-parse": "^6.1.0",
+    "framer-motion": "^12.23.24",
+    "pannellum": "^2.5.6"
+  }
+}
