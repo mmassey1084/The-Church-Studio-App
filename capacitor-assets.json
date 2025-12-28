@@ -1,0 +1,12 @@
+{
+  "resourcesDirectory": "resources",
+  "platforms": ["android", "pwa"],
+  "pwa": {
+    "manifestPath": "client/dist/manifest.webmanifest"
+  },
+  "iconBackgroundColor": "#658D1B",
+  "iconForegroundSource": "icon.png",
+  "splashBackgroundColor": "#000000"
+}
+
+

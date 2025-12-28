@@ -40,6 +40,7 @@ export async function registerPush(options = {}) {
     PushNotifications.addListener("registration", async (token) => {
       try {
         console.log("[push] Device token:", token.value?.slice(0, 18) + "…");
+        console.log("[push] FULL Device token:", token.value);
 
         const res = await fetch(`${apiBase}/api/push/register`, {
           method: "POST",

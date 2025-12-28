@@ -1,15 +1,8 @@
 // src/App.jsx
-import React, { useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { useEffect } from "react";
+import {BrowserRouter, Routes,  Route, useLocation,useNavigate} from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Capacitor } from "@capacitor/core";
-
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
 import VirtualTour from "./pages/VirtualTour.jsx";
@@ -61,7 +54,7 @@ function AppRoutes() {
     (async () => {
       const isNative = Capacitor?.isNativePlatform?.() ?? false;
       if (!isNative) {
-        // Useful debug so we know why pushes won't register on web builds
+        // ebug so we know why pushes won't register on web builds
         console.info("[push] Skipping registerPush on web/PWA");
         return;
       }

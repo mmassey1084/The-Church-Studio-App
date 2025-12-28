@@ -15,10 +15,11 @@ export default function Archive() {
 
   // Close on ESC
   useEffect(() => {
-    if (!lightboxSrc) return;
-    const onKey = (e) => e.key === "Escape" && setLightboxSrc(null);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    if (!lightboxSrc) 
+      return;
+        const onKey = (e) => e.key === "Escape" && setLightboxSrc(null);
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
   }, [lightboxSrc]);
 
   // Prevent background scroll when open

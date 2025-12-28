@@ -36,7 +36,6 @@ export default function WeatherBadge({ className = "", size = "default" }) {
           setCode(typeof cw?.weathercode === "number" ? cw.weathercode : null);
         })
         .catch(() => {
-          // ignore; just show fallback state
         })
         .finally(() => {
           if (!cancelled) setLoading(false);

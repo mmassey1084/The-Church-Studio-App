@@ -39,7 +39,7 @@ export default function PreloadOnBoot() {
         const arr = Array.isArray(raw) ? raw : [];
         setPlansCache(arr);
       } catch {
-        // ignore — BackstagePass still fetches on demand if needed
+
       }
     };
 
@@ -52,5 +52,5 @@ export default function PreloadOnBoot() {
     }
   }, []);
 
-  return null; // no UI
+  return null; 
 }
