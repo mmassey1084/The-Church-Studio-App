@@ -1,0 +1,14 @@
+.env
+client/.env
+server/.env
+.env
+node_modules/
+.vscode/
+.idea/
+node_modules/
+server/node_modules/
+.env
+# Secrets
+serviceAccount.json
+server/serviceAccount.json
+.env
