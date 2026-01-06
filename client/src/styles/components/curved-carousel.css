@@ -1,0 +1,185 @@
+
+/* ===== Curved Carousel (dark-friendly) ===== */
+.merch-carousel-wrap {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-radius: var(--radius-lg);
+  padding: 18px 8px 22px;
+  overflow: hidden;
+}
+
+.curved-carousel {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+}
+
+.cc-stage {
+  position: relative;
+  height: 260px;
+  display: grid;
+  place-items: center;
+  perspective: 800px;
+}
+
+.cc-item {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform-origin: center;
+  translate: -50% 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+  transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.2s ease,
+    filter 0.2s ease;
+}
+
+.cc-item:focus-visible {
+  outline: 3px solid var(--ring);
+  border-radius: 16px;
+}
+
+.cc-item.is-active {
+  filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.6));
+}
+
+.cc-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none; /* click passes to button */
+}
+
+/* Dots */
+.cc-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.cc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cc-dot.active {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+/* Slightly larger on wider screens */
+@media (min-width: 768px) {
+  .cc-img {
+    width: 210px;
+    height: 210px;
+  }
+  .curved-carousel {
+    min-height: 360px;
+  }
+}
+
+.cc-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+.cc-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cc-arrow:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+}
+
+.loading-overlay-spinner {
+  animation: church-spin 0.8s linear infinite;
+}
+
+@keyframes church-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.checkout-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
+  backdrop-filter: blur(10px);
+}
+
+.checkout-overlay-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.checkout-spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #658d1b; /* Church green */
+  animation: checkout-spin 0.75s linear infinite;
+}
+
+.checkout-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-heading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkout-sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@keyframes checkout-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

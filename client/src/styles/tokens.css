@@ -1,0 +1,27 @@
+:root {
+  --brand: #658d1b;
+
+  /* Kayla brand: off-white / cream */
+  --ink: #f0f1e8;
+  --ink-dim: rgba(240, 241, 232, 0.72);
+
+  --bg: #000;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-2: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.18);
+  --accent: rgba(101, 141, 27, 0.18);
+  --radius: 16px;
+  --radius-lg: 22px;
+
+  --header-h: 64px;
+  --bottom-nav-h: 76px;
+
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  --focus: #d6ff66; /* global focus (lime) */
+  --ring: rgba(101, 141, 27, 0.45);
+}

@@ -1,0 +1,55 @@
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  line-height: 1;
+  font-weight: 700;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.badge-ok {
+  color: #bff700;
+  border-color: rgba(191, 247, 0, 0.35);
+}
+
+.badge-warn {
+  color: #ffd166;
+  border-color: rgba(255, 209, 102, 0.35);
+}
+
+/* Skeleton loaders */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.12) 37%,
+    rgba(255, 255, 255, 0.06) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.25s infinite linear;
+}
+
+.skeleton-card {
+  display: grid;
+  gap: 10px;
+}
+
+.btn-skeleton {
+  border-radius: 999px;
+}

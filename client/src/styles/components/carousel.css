@@ -1,0 +1,34 @@
+/* Carousel */
+.carousel {
+  margin: var(--space-2) auto;
+  width: min(920px, 92%);
+}
+
+.carousel .carousel-control-next-icon,
+.carousel .carousel-control-prev-icon {
+  filter: invert(1) drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+}
+
+.carousel-indicators [data-bs-target] {
+  background: #fff;
+}
+
+/* Carousel images */
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 320px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-inner img {
+    height: 240px;
+  }
+}

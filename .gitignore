@@ -12,3 +12,4 @@ server/node_modules/
 serviceAccount.json
 server/serviceAccount.json
 .env
+

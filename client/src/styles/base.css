@@ -1,0 +1,130 @@
+/* Global base */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #000;
+  overscroll-behavior-y: none;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Roboto", "Helvetica Neue", system-ui, -apple-system, Segoe UI, Arial,
+    sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lock scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Persistent background */
+#app-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("/src/assets/soundboard_1080x2400.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Foreground content container */
+#app-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+}
+
+/* Page wrapper */
+.page {
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + var(--space-2));
+  padding-bottom: calc(
+    env(safe-area-inset-bottom, 0px) + var(--bottom-nav-h) + var(--space-3)
+  );
+}
+
+/* Titles */
+.page-title,
+.hero-title,
+.sg-title,
+h1 {
+  font-family: "League Spartan", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.02;
+}
+
+.page-title {
+  margin: 0 0 var(--space-3) 0;
+  font-size: clamp(30px, 4.2vw, 44px);
+  letter-spacing: 0.02em;
+}
+
+/* Secondary headings */
+h2,
+h3,
+.section-head h2,
+.sg-card-title,
+.overlay-list a {
+  font-family: "Anton", "Futura PT Condensed", "Futura-Condensed", "Impact",
+    "Haettenschweiler", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: clamp(20px, 2.6vw, 26px);
+  color: var(--ink);
+}
+
+/* Sections */
+.section {
+  margin: var(--space-4) 0;
+}
+
+/* Selection + links */
+::selection {
+  background: rgba(101, 141, 27, 0.35);
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Strong focus (WCAG AA) */
+:where(button, .btn, a, input, select, summary):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}

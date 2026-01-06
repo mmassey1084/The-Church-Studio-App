@@ -1,0 +1,72 @@
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  /* tuck it slightly UNDER the system nav buttons / gesture bar */
+  bottom: -10px;
+
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* keep the nav fairly compact so it hugs the bottom */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-top: 4px;
+
+  margin: 0;
+}
+
+.bottom-nav-track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  /* reduce bottom padding so the chips sit lower */
+  padding: 6px 12px 4px;
+}
+
+.bottom-nav-item {
+  scroll-snap-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  min-width: 84px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.bottom-nav-item:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.bottom-nav-item.active {
+  outline: 2px solid var(--brand);
+  background: rgba(101, 141, 27, 0.18);
+}
+
+.bottom-nav-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: currentColor;
+}
+
+.bottom-nav-label {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.bottom-nav-track::-webkit-scrollbar {
+  display: none;
+}

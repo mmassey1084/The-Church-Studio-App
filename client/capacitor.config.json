@@ -1,5 +1,11 @@
 {
   "appId": "com.churchstudio.app",
   "appName": "The Church Studio",
-  "webDir": "dist"
+  "webDir": "dist",
+  "server": {
+    "allowNavigation": [
+      "my.matterport.com",
+      "*.matterport.com"
+    ]
+  }
 }

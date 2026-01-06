@@ -1,0 +1,15 @@
+input,
+select {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  outline: none;
+  min-height: 44px;
+}
+
+input::placeholder {
+  color: var(--ink-dim);
+}
